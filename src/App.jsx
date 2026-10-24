@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 
-const API_URL = "http://127.0.0.1:8000/api/tasks";
+const API_URL = "https://task-app-7ust.onrender.com/api/tasks";
 
 function App() {
   const [tasks, setTasks] = useState([]);
