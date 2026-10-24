@@ -1,0 +1,310 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #25263a;
+  background: #f5f5fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 64px 20px;
+  background:
+    radial-gradient(circle at 10% 10%, #e8e6ff 0, transparent 32%),
+    radial-gradient(circle at 90% 90%, #e0f4f0 0, transparent 32%),
+    #f8f8fc;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 650px;
+  padding: 36px;
+  background: white;
+  border: 1px solid #ededf5;
+  border-radius: 24px;
+  box-shadow: 0 22px 70px #34345b12;
+}
+
+.header {
+  text-align: center;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 20px;
+  border-radius: 17px;
+  background: #635bdb;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.eyebrow {
+  color: #7773c6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 8px 0;
+  font-family: Manrope, sans-serif;
+  font-size: 36px;
+  letter-spacing: -1.5px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #9293a6;
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 17px 8px;
+  text-align: center;
+  border-radius: 14px;
+  background: #f8f8fd;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.stat-label {
+  color: #9293a6;
+  font-size: 12px;
+}
+
+.add-form {
+  display: flex;
+  gap: 10px;
+}
+
+.add-form input,
+.edit-form input {
+  min-width: 0;
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #e6e6f0;
+  border-radius: 12px;
+  outline: none;
+}
+
+.add-form input:focus,
+.edit-form input:focus {
+  border-color: #7770e7;
+  box-shadow: 0 0 0 3px #7770e71a;
+}
+
+.add-button {
+  padding: 0 20px;
+  border: 0;
+  border-radius: 12px;
+  background: #635bdb;
+  color: white;
+  font-weight: 600;
+}
+
+.add-button:hover {
+  background: #5048c5;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin: 26px 0 16px;
+}
+
+.filter {
+  padding: 9px 15px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #85869a;
+  font-size: 13px;
+}
+
+.active-filter {
+  background: #eeedff;
+  color: #5b53d0;
+  font-weight: 700;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 60px;
+  padding: 12px;
+  border: 1px solid #eeeeF5;
+  border-radius: 13px;
+}
+
+.task-row > input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: #635bdb;
+  flex-shrink: 0;
+}
+
+.task-title {
+  flex: 1;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.completed {
+  color: #a3a3b2;
+  text-decoration: line-through;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.icon-button {
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: #f5f5fa;
+  color: #696a80;
+  font-size: 11px;
+}
+
+.icon-button:hover {
+  background: #eae9ff;
+  color: #5149c8;
+}
+
+.delete-button:hover {
+  background: #fff0f0;
+  color: #d64545;
+}
+
+.edit-form {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.edit-form input {
+  padding: 8px;
+}
+
+.empty-state {
+  padding: 40px 12px;
+  text-align: center;
+  color: #9293a6;
+}
+
+.empty-state span {
+  font-size: 28px;
+  color: #7770e7;
+}
+
+.empty-state p {
+  margin-bottom: 5px;
+  color: #45465b;
+  font-weight: 600;
+}
+
+.empty-state small {
+  font-size: 12px;
+}
+
+.footer {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f6;
+  color: #a0a0b1;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 24px 12px;
+  }
+
+  .todo-card {
+    padding: 22px 16px;
+    border-radius: 18px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .stats {
+    gap: 7px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+  }
+
+  .task-row {
+    flex-wrap: wrap;
+  }
+
+  .task-actions {
+    margin-left: auto;
+  }
+}
+
+.api-error {
+  padding: 12px;
+  margin: 20px 0 0;
+  border-radius: 10px;
+  background: #fff0f0;
+  color: #b42323;
+  font-size: 13px;
+  text-align: center;
+}
