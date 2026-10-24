@@ -85,10 +85,10 @@ npm install
 
 Create a `.env` file in the project root directory and add the MongoDB connection string and port configuration expected by `src/server.js`.
 
-Example, **if your server reads `MONGO_URI`**:
+Example, using the environment variable `MONGODB_URI`:
 
 ```env
-MONGO_URI=your_mongodb_connection_string
+MONGODB_URI=your_mongodb_connection_string
 PORT=8000
 ```
 
